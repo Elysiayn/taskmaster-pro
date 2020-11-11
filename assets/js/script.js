@@ -140,6 +140,8 @@ $(".list-group").on("blur", "input[type='text']", function() {
     .index();
 
   // update task in array and re-save to localstorage
+  console.log(tasks[status][index], index);
+  console.log (status);
   tasks[status][index].date = date;
   saveTasks();
 
@@ -172,7 +174,7 @@ $("#task-form-modal .btn-primary").click(function() {
   var taskDate = $("#modalDueDate").val();
 
   if (taskText && taskDate) {
-    createTask(taskText, taskDate, "toDo");
+    createTask(taskText, taskDate, "toDo ");
 
     // close modal
     $("#task-form-modal").modal("hide");
